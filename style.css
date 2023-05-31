@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+/* Navbar */
+.container, .header{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+   display: inline-block;
+   list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+.menu-icon{
+   width: 28px; 
+   display: none;
+}
+/* Header */
+.header{
+    max-width: 1080px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col-4{
+    flex-basis: 24%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+}
+
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.rating .fas{
+    color: #ff523b;
+}
+
+.col-4:hover{
+    transform: translateY(-10px);
+}
+/* Footer */
+footer{
+   color: #8a8a8a;
+   font-size: 14px;
+   padding: 60px 0 20px;
+}
+footer p{
+    color: #8a8a8a;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+/* Media Qeurey for 800px */
+
+@media only screen and (max-width:800px){
+    /* Media Qeury For Menu */
+     nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: max-heigth 0.5s;
+        background-color: #555;
+        z-index: 10;
+     }
+     nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+     }
+     nav ul li a{
+        color: #fff;
+     }
+     .menu-icon{
+        display: block;
+        cursor: pointer;
+     }
+     .logo img{
+        height: 50px;
+     }
+}
+/* Media Qeurey for Screen Less Than 600px */
+
+@media only screen and (max-width:600px){
+    .row{
+       text-align: center;
+    }
+    .col-4{
+       flex-basis: 100%;
+    }
+   }
